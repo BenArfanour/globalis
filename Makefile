@@ -7,6 +7,9 @@ down:
 sh:
 	docker compose exec php bash
 
+card-games:
+    docker compose exec php php bin/console app:deal-cards
+
 composer:
 	docker compose exec -T php composer $(cmd)
 
