@@ -17,7 +17,8 @@ install:
 	docker compose exec -T php composer install
 
 test:
-	docker compose exec -T php ./vendor/bin/phpunit --testdox
+	docker compose exec -T php env APP_ENV=test APP_DEBUG=1 ./vendor/bin/phpunit --testdox
+
 
 cs:
 	docker compose exec -T php ./vendor/bin/php-cs-fixer fix --diff --dry-run
