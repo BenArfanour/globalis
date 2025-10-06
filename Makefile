@@ -1,3 +1,4 @@
+
 up:
 	docker compose up -d --build
 
@@ -7,8 +8,8 @@ down:
 sh:
 	docker compose exec php bash
 
-card-games:
-    docker compose exec php php bin/console app:deal-cards
+game:
+	docker compose exec php php bin/console app:deal-cards
 
 composer:
 	docker compose exec -T php composer $(cmd)
@@ -18,7 +19,6 @@ install:
 
 test:
 	docker compose exec -T php env APP_ENV=test APP_DEBUG=1 ./vendor/bin/phpunit --testdox
-
 
 cs:
 	docker compose exec -T php ./vendor/bin/php-cs-fixer fix --diff --dry-run
