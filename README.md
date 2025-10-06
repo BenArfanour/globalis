@@ -19,7 +19,7 @@ make install
 Aller sur : http://localhost:8080/cards
 
 4) Lancer la CLI
-make card-games
+make game
 
 5) Lancer les tests:
 make test     # PHPUnit
@@ -44,10 +44,10 @@ make install : composer install dans le conteneur
 
 make test : exécuter PHPUnit
 
-make stan : PHPStan (si installé)
+make stan : PHPStan 
 
-make cs : check code style (si installé)
+make cs : check code style 
 
-make fix : auto-fix CS (si installé)
+make fix : auto-fix CS 
 
 make sh : shell dans le conteneur PHP
