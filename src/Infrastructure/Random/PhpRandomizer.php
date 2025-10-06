@@ -22,7 +22,7 @@ final class PhpRandomizer implements RandomizerInterface
         }
         $result = [];
         while (\count($result) < $count) {
-            $i = $this->randomizer->nextInt(0, $maxExclusive - 1);
+            $i = $this->randomizer->getInt(0, $maxExclusive - 1);
             $result[$i] = true;
         }
         return array_keys($result);
